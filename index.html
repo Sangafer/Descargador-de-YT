@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftConvert | Descarga Multimedia Ultra Rápida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#tareas">Tareas Activas</a></li>
+                <li><a href="#historial">Historial</a></li>
+                <li><a href="#configuracion">Configuración</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Extraer y Convertir</h1>
+            <p>Pega tu enlace de YouTube para comenzar el análisis automático.</p>
+        </header>
+
+        <section class="input-section">
+            <div class="url-input-container">
+                <input type="url" id="media-url" placeholder="https://www.youtube.com/watch?v=..." required>
+                <button id="analyze-btn">Analizar Enlace</button>
+            </div>
+        </section>
+
+        <section id="config-section" class="conversion-card hidden">
+            <div class="media-preview">
+                <div class="thumbnail-placeholder">
+                    <img src="" alt="Miniatura del video" id="video-miniature">
+                </div>
+                <div class="media-info">
+                    <h3 id="video-title">Título del Video Extraído</h3>
+                    <span id="video-duration">00:00</span>
+                </div>
+            </div>
+
+            <div class="format-selectors">
+                <div class="selector-group">
+                    <label for="format-type">Formato de Salida:</label>
+                    <select id="format-type">
+                        <option value="mp4">Video (MP4)</option>
+                        <option value="mp3">Audio (MP3)</option>
+                    </select>
+                </div>
+
+                <div class="selector-group">
+                    <label for="quality">Calidad:</label>
+                    <select id="quality">
+                        <option value="1080p">1080p (FHD)</option>
+                        <option value="4k">4K (UHD)</option>
+                        <option value="720p">720p (HD)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="action-row">
+                <button id="start-download-btn">Iniciar Conversión</button>
+            </div>
+        </section>
+
+        <section id="progress-section" class="conversion-card hidden">
+            <h3>Procesando...</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="current-progress" style="width: 50%;"></div>
+            </div>
+            <p id="status-text">Descargando metadatos...</p>
+        </section>
+
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>>
